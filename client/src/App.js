@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Typography, AppBar } from "@material-ui/core";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <AppBar position='static' color='inherit'>
+          <Typography variant='h2' align='center'>
+            Mooz
+          </Typography>
+        </AppBar>
+        {/* video player*/}
+        {/* options */}
+      </div>
+    </>
   );
-}
+};
 
 export default App;
