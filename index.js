@@ -14,7 +14,7 @@ app.use(cors());
 const PORT = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
-  res.send("welcome");
+  res.send("mooz server is running");
 });
 
 io.on("connection", (socket) => {
