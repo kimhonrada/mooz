@@ -1,2 +1,2 @@
 # mooz
-webRTC project
+(Mooz)[https://mooz-web.netlify.app/]
