@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 const Options = ({ children }) => {
 
   const { me, callAccepted, name, setName, leaveCall, callEnded, callUser } = useContext(SocketContext)
-  const [idToCall, setIdToCall] = useState('')
+  const [idToCall, setIdToCall] = useState("")
   const classes = useStyles()
 
   return (
@@ -52,7 +52,7 @@ const Options = ({ children }) => {
               <Typography gutterBottom variant='h6'>
                 Account Information
               </Typography>
-              <TextField label='Name' value={name} onChange={(e) => setName(e.target.name)} fullWidth />
+              <TextField label='Name' value={name} onChange={(e) => setName(e.target.value)} fullWidth />
               <CopyToClipboard text={me} className={classes.margin}>
                 <Button variant='contained' color='primary' fullWidth startIcon={<Assignment fontSize='large' />} />
               </CopyToClipboard>
@@ -61,7 +61,7 @@ const Options = ({ children }) => {
               <Typography gutterBottom variant='h6'>
                 Make a Call
               </Typography>
-              <TextField label='ID To Call' value={idToCall} onChange={(e) => setIdToCall(e.target.idToCall)} fullWidth />
+              <TextField label='ID To Call' value={idToCall} onChange={(e) => setIdToCall(e.target.value)} fullWidth />
               {
                 callAccepted && !callEnded ? (
                   <Button
@@ -92,6 +92,7 @@ const Options = ({ children }) => {
             </Grid>
           </Grid>
         </form>
+        {children}
       </Paper>
     </Container >
   )
